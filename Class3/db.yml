@@ -21,5 +21,13 @@
     state: present
     login_unix_socket: /run/mysqld/mysqld.sock
 
+- name: Create database user 
+  community.mysql.mysql_user:
+    name: amina
+    password: amina123
+    priv: '*.*:ALL'
+    state: present
+    login_unix_socket: /run/mysqld/mysqld.sock
+
 
 
