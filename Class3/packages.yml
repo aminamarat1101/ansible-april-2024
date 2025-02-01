@@ -2,8 +2,7 @@
   ansible.builtin.apt:
     name:
       - ghostscript
-      - libapache2-mod-php
-      - mysql-server
+      - libapache2-mod-php #removed mysql server after this
       - php
       - php-bcmath
       - php-curl

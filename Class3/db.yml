@@ -9,3 +9,17 @@
     name: mysql
     state: started
     enabled: yes
+
+- name: Install PyMySQL
+  ansible.builtin.apt:
+    name: python3-pymysql
+    state: present
+
+- name: Create a new database
+  community.mysql.mysql_db:
+    name: kaizen
+    state: present
+    login_unix_socket: /run/mysqld/mysqld.sock
+
+
+
